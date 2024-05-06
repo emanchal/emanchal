@@ -9,9 +9,20 @@
 //  0  0  0  1    p0
 
 module priority_counter;
-  inputs
-  outputs
-
-  design code
-
+  inputs p3, p2, p1, p0;
+  outputs y;
+  
+  //design code
+  case 0000;
+    y = 0;
+  case 1000;
+    y= p3;
+  case 0100;
+    y= p2;
+  case 0010;
+    y = p1;
+  case 0001;
+    y = p0;
+  default y = 0;
+  
 endmodule
