@@ -13,16 +13,19 @@ module priority_counter;
   outputs y;
   
   //design code
-  case 0000;
-    y = 0;
-  case 1000;
-    y= p3;
-  case 0100;
-    y= p2;
-  case 0010;
-    y = p1;
-  case 0001;
-    y = p0;
-  default y = 0;
+  always @ ( p0 or p1 or p2 or p3)
+    begin
+    case 0000;
+      y = 0;
+    case 1000;
+      y= p3;
+    case 0100;
+      y= p2;
+    case 0010;
+      y = p1;
+    case 0001;
+      y = p0;
+    default y = 0;
+      end
   
 endmodule
